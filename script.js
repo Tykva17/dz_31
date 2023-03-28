@@ -12,14 +12,9 @@ promise.then(alert); // виводить 1, бо тут може бути оди
 
 function delay(ms) {
     return new Promise(function(resolve, reject) {
-        let msConverted = ms/1000;
-        for(let i = 0; i <= msConverted; i++){
            setTimeout(function () {
-               if(i > msConverted - 0.1){
                    resolve();
-               }
-           },1000)
-        }
+           },ms)
     })
 }
 
